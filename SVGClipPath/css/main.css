@@ -48,6 +48,7 @@ body {
   -webkit-transform: rotate(100deg);
           transform: rotate(100deg);
   animation: leaf1 5s infinite alternate-reverse;
+  margin: 0;
 }
 
 .leaf2 {
