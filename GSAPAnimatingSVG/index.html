@@ -336,12 +336,26 @@
       <a href="#" class="cta main-content">Start Learning</a>
     </div>
 
+    <section class="content flex">
+      <div class="left-column marketing">
+        <h2 class="marketing title">This is a really cool product</h2>
+        <p class="left-column_text marketing">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, quos?</p>
+        <a href="#" class="cta marketing">Learn More</a>
+      </div>
+      <div class="right-column marketing">
+        <img class="right-column_image" src="images/product.jfif" alt="">
+      </div>
+
+    </section>
+
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
 
     <script>
       let tl = gsap.timeline({defaults: { duration: .7, ease: Back.easeOut.config(2), opacity: 0}})
       let tl2 = gsap.timeline({defaults: { duration: 1.5, delay: .5}})
       let tl3 = gsap.timeline({defaults: { duration: 1.5}})
+      let tl4 = gsap.timeline({defaults: {duration: 2.5, ease: Power4.easeOut, opacity: 0, delay: 1}})
+      let tl5 = gsap.timeline({defaults: {duration: 1}})
 
       tl.from('.card-bg', {delay: 1, scale: .2, transformOrigin: 'center'}, "=.2")
         .from('.card-top', {scaleY: 0, transformOrigin: 'top'})
@@ -354,6 +368,7 @@
 
       tl2.to('.whole-card', {y: 10, repeat: -1, yoyo: true})
       tl3.from('.main-content', {opacity: 0, y:40, stagger: .3})
+      tl4.from('.marketing', {rotation: 1, opacity: 0, x: 10, y: 5, stagger: .1, })
     </script>
 </body>
 </html>
